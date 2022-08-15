@@ -1,0 +1,180 @@
+.Prose {
+    display: grid;
+    grid-template-columns: [full-start] minmax(20px, 1fr) [main-start] minmax(0, 1960px) [main-end] minmax(20px, 1fr) [full-end];
+    grid-auto-rows: max-content;
+}
+
+.Prose > * {
+  grid-column: main;
+}
+
+.Prose-splash {
+    grid-column: full;
+}
+
+main{
+    flex-grow: 1;
+}
+
+.p1{
+    padding: .5rem;
+}
+.p2{
+    padding: 1rem;
+}
+.p3{
+    padding: 1.5rem;
+}
+.p4{
+    padding: 2rem;
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {    
+    font-family: 'Roboto';
+    font-weight: 400;        
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.icon{
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+button {
+    font-family: inherit;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    resize: none;
+    background: none;
+}
+
+input {
+    font-family: inherit;
+}
+
+.m-r-1{
+    margin-right: 0.5rem;
+}
+
+.d-flex{
+    display: flex;
+}
+
+/* начало стилей */
+
+.popular_countries_item{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 59px;
+    margin: 60px 0;
+}
+
+.popular_countries_item>div{
+    display: flex;
+    gap: 65px;
+    flex-direction: column;
+}
+
+.popular_countries_card{
+    padding: 20px;
+    background: #E8F0F9;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.popular_countries_card :last-child{
+    margin-top: auto;
+}
+
+
+.countries{
+    margin-bottom: 11px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    padding: 6px 14px ;
+    width: 214px;
+}
+
+.popular_cities{
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 14px;
+}
+
+.attractions{
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 14px;
+}
+
+.countries_name{
+    display: flex;
+
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: #1B1E26;
+}
+
+.number_excursions{
+    display: flex;    
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: #828282;
+}
+
+.number_excursions span{
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px;
+    color: #000000;
+}
+
+/* .countries img{
+    object-fit: contain;
+} */
