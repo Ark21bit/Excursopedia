@@ -96,55 +96,57 @@ input {
 
 /* начало стилей */
 
-.popular_countries_item{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.popular_countries .item{
+    display: flex;
+    flex-wrap: wrap;
     gap: 59px;
     margin: 60px 0;
 }
 
-.popular_countries_item>div{
+.popular_countries .item>div{
     display: flex;
     gap: 65px;
     flex-direction: column;
+    flex:1;
 }
 
-.popular_countries_card{
+.popular_countries .card{
     padding: 20px;
-    background: #E8F0F9;
+    background-color: #E8F0F9;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    flex: 1;
+    flex: 1;    
 }
 
-.popular_countries_card :last-child{
+/* .popular_countries .card :last-child{
     margin-top: auto;
-}
+} */
 
 
-.countries{
+.popular_countries  .countries{
     margin-bottom: 11px;
     background: #FFFFFF;
     border-radius: 5px;
-    padding: 6px 14px ;
-    width: 214px;
+    padding: 6px 14px ;    
+    min-width: 214px;
+    align-self: flex-start;
 }
 
-.popular_cities{
+.popular_countries  .popular_cities{
     background: #FFFFFF;
     border-radius: 10px;
     padding: 14px;
 }
 
-.attractions{
+.popular_countries  .attractions{
     background: #FFFFFF;
     border-radius: 10px;
     padding: 14px;
 }
 
-.countries_name{
+.countries .name{
     display: flex;
 
     font-family: 'Rubik';
@@ -153,9 +155,45 @@ input {
     font-size: 22px;
     line-height: 26px;
     color: #1B1E26;
+    margin-bottom: 5px;
 }
 
-.number_excursions{
+.bg_france{
+    background: url(../img/bg_france.png);
+}
+
+.bg_spain{
+    background: url(../img/bg_spain.png);
+}
+
+.bg_mexico{
+    background: url(../img/bg_mexico.png);
+}
+
+.bg_china{
+    background: url(../img/bg_china.png);
+}
+
+.bg_card{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+
+.popular_cities .name, .attractions .name{
+    display: flex;
+
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: #1B1E26;
+    margin-bottom: 6px;
+    align-items: center;
+}
+
+.popular_countries  .number_excursions{
     display: flex;    
 
     font-family: 'Montserrat';
@@ -166,13 +204,18 @@ input {
     color: #828282;
 }
 
-.number_excursions span{
+.popular_countries  .number_excursions span{
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 500;
     font-size: 17px;
     line-height: 24px;
     color: #000000;
+}
+
+
+.popular_countries .card.bg_card .popular_cities, .popular_countries .card.bg_card .attractions{
+    background-color:  rgba(255, 255, 255, 0.75);
 }
 
 /* .countries img{
